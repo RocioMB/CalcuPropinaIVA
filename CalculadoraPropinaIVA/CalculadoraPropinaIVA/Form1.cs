@@ -19,11 +19,16 @@ namespace CalculadoraPropinaIVA
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            int cuenta = int.Parse(totalCuenta.ToString());
-            int iva = int.Parse(totalVA.ToString());
-            int propina = int.Parse(totalPropina.ToString());
+            int cuenta = int.Parse(totalCuenta.Text);
+            int iva = int.Parse(totalVA.Text);
+            int propina = int.Parse(totalPropina.Text);
+
+            double totalConPropina = cuenta + ((cuenta * propina)/100);
+            double totalConIVA = cuenta + ((cuenta * iva)/100);
 
 
+            resultadoIVA.Text = totalConPropina.ToString();
+            resultadoPropina.Text = totalConIVA.ToString(); 
 
         }
     }

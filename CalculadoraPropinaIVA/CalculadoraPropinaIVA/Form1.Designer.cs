@@ -54,9 +54,9 @@
             this.resultadoIVA.AutoSize = true;
             this.resultadoIVA.Location = new System.Drawing.Point(561, 161);
             this.resultadoIVA.Name = "resultadoIVA";
-            this.resultadoIVA.Size = new System.Drawing.Size(93, 16);
+            this.resultadoIVA.Size = new System.Drawing.Size(117, 16);
             this.resultadoIVA.TabIndex = 1;
-            this.resultadoIVA.Text = "Resultado IVA";
+            this.resultadoIVA.Text = "Total Cuenta + IVA";
             // 
             // resultadoPropina
             // 
