@@ -19,8 +19,8 @@ namespace CalculadoraPropinaIVA
 
         private double calculaPorcentaje(int total, int porcentaje)
         {
-            double resultado = 0;
-            resultado = ( total + ((total * porcentaje)/100));
+            double resultado;
+            resultado = ( total + ((total / porcentaje)));
             return resultado;
         }
 
@@ -30,8 +30,8 @@ namespace CalculadoraPropinaIVA
             int iva = int.Parse(totalVA.Text);
             int propina = int.Parse(totalPropina.Text);
 
-            double totalConPropina = calculaPorcentaje(cuenta, propina);
-            double totalConIVA = calculaPorcentaje(cuenta, iva);
+            double totalConPropina = calculaPorcentaje(cuenta, iva);
+            double totalConIVA = calculaPorcentaje(cuenta, propina);
 
             resultadoIVA.Text = totalConIVA.ToString();
             resultadoPropina.Text = totalConPropina.ToString(); 
