@@ -26,12 +26,12 @@ namespace CalculadoraPropinaIVA
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            int cuenta = int.Parse(totalCuenta.Text);
-            int iva = int.Parse(totalVA.Text);
+            int cuentaRMB2324 = int.Parse(totalCuenta.Text);
+            int ivaRMB2324 = int.Parse(totalVA.Text);
             int propina = int.Parse(totalPropina.Text);
 
-            double totalConPropina = calculaPorcentaje(cuenta, iva);
-            double totalConIVA = calculaPorcentaje(cuenta, propina);
+            double totalConPropina = calculaPorcentaje(cuentaRMB2324, ivaRMB2324);
+            double totalConIVA = calculaPorcentaje(cuentaRMB2324, propina);
 
             resultadoIVA.Text = totalConIVA.ToString();
             resultadoPropina.Text = totalConPropina.ToString(); 
